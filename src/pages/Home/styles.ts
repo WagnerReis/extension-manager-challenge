@@ -5,4 +5,6 @@ export const Container = styled.main`
   height: 100vh;
 
   display: flex;
+  justify-content: center;
+  padding: 0 15rem;
 `;
