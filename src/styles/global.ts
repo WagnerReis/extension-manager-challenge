@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import { mixins } from "./mixins";
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -11,13 +10,13 @@ export const GlobalStyle = createGlobalStyle`
   input { 
     &:focus {
       outline: 0;
-      box-shadow: 0 0 0 2px ${(props) => props.theme["neutral-900"]};
+      box-shadow: 0 0 0 2px ${(props) => props.theme.shadows.small};
     }
   }
 
   body {
-    ${mixins.fonts.dark.background}
-    color: ${(props) => props.theme["neutral-100"]};
+    background: ${(props) => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.text};
     -webkit-font-smoothing: antialiased;
   }
 

@@ -12,13 +12,13 @@ export const HeaderContainer = styled.div`
   padding: 0 1rem;
   margin-top: 2.5rem;
 
-  background: ${(props) => props.theme["neutral-800"]};
+  background: ${(props) => props.theme.colors.neutral800};
 `;
 
 export const ToogleTheme = styled.button`
   width: 2.5rem;
   height: 2.5rem;
-  background: ${(props) => props.theme["neutral-700"]};
+  background: ${(props) => props.theme.colors.neutral700};
 
   display: flex;
   align-items: center;
@@ -29,7 +29,7 @@ export const ToogleTheme = styled.button`
   cursor: pointer;
 
   &:hover {
-    border: 1px solid ${(props) => props.theme["neutral-600"]};
+    border: 1px solid ${(props) => props.theme.colors.neutral600};
     opacity: 0.7;
     transition: opacity 0.1s;
   }
