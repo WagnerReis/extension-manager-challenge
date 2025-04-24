@@ -12,7 +12,7 @@ export const HeaderContainer = styled.div`
   padding: 0 1rem;
   margin-top: 2.5rem;
 
-  background: ${(props) => props.theme.colors.neutral800};
+  background: ${(props) => props.theme.colors.cardBackground};
 `;
 
 export const ToogleTheme = styled.button`

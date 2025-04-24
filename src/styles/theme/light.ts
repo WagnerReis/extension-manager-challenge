@@ -13,7 +13,7 @@ export const lightTheme = {
     red500: "hsl(3, 71%, 56%)",
     red700: "hsl(3, 77%, 44%)",
 
-    background: "hsl(200, 60%, 99%)",
+    background: "hsl(217, 61%, 90%)",
     cardBackground: "#FFFFFF",
     text: "hsl(227, 75%, 14%)",
     border: "hsl(217, 61%, 90%)",
