@@ -4,11 +4,9 @@ import { router } from "./router";
 import { ThemeProvider } from "./contexts/ThemeContext";
 export function App() {
   return (
-    <>
-      <ThemeProvider>
-        <GlobalStyle />
-        <RouterProvider router={router} />
-      </ThemeProvider>
-    </>
+    <ThemeProvider>
+      <GlobalStyle />
+      <RouterProvider router={router} />
+    </ThemeProvider>
   );
 }

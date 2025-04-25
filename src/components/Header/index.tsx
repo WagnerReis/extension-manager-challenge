@@ -1,20 +1,24 @@
-import logo from "../../assets/favicon-32x32.png";
+import logoDark from "../../assets/logo-dark.svg";
+import logoLight from "../../assets/logo-light.svg";
 import sun from "../../assets/icon-sun.svg";
+import moon from "../../assets/icon-moon.svg";
 import { useTheme } from "../../hooks/useTheme";
 import { HeaderContainer, ToogleTheme, Logo } from "./styles";
 
 export function Header() {
-  const { toogleTheme } = useTheme();
+  const { theme, toogleTheme } = useTheme();
+
+  const logo = theme === "dark" ? logoLight : logoDark;
+  const toogleIcon = theme === "dark" ? sun : moon;
 
   return (
     <HeaderContainer>
       <Logo>
         <img src={logo} alt="" />
-        <h2>Extensions</h2>
       </Logo>
 
       <ToogleTheme onClick={toogleTheme}>
-        <img src={sun} alt="" />
+        <img src={toogleIcon} alt="" />
       </ToogleTheme>
     </HeaderContainer>
   );

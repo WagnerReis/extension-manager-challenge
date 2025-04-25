@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.main`
-  width: 100%;
+  max-width: 1440px;
   height: 100vh;
 
   display: flex;
   justify-content: center;
-  padding: 0 15rem;
+  margin: 0 auto;
 `;

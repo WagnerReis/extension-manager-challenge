@@ -18,6 +18,8 @@ export const darkTheme = {
     text: "hsl(0, 0%, 93%)",
     border: "hsl(225, 23%, 24%)",
 
+    backgroundToogle: "hsl(225, 23%, 24%)",
+
     gradient: "linear-gradient(180deg, #040918 0%, #091540 100%)",
   },
   shadows: {

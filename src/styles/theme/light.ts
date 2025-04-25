@@ -18,6 +18,8 @@ export const lightTheme = {
     text: "hsl(227, 75%, 14%)",
     border: "hsl(217, 61%, 90%)",
 
+    backgroundToogle: "hsl(0, 0%, 93%)",
+
     gradient: "linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%)",
   },
   shadows: {

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
   width: 100%;
-  height: 4rem;
+  height: 5rem;
   background: red;
   border-radius: 15px;
 
@@ -16,9 +16,9 @@ export const HeaderContainer = styled.div`
 `;
 
 export const ToogleTheme = styled.button`
-  width: 2.5rem;
-  height: 2.5rem;
-  background: ${(props) => props.theme.colors.neutral700};
+  width: 3rem;
+  height: 3rem;
+  background: ${(props) => props.theme.colors.backgroundToogle};
 
   display: flex;
   align-items: center;
