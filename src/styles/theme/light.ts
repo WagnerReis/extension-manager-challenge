@@ -17,7 +17,7 @@ export const lightTheme = {
     cardBackground: "#FFFFFF",
     buttonBackground: "hsl(0, 0%, 93%)",
     text: "hsl(227, 75%, 14%)",
-    border: "hsl(217, 61%, 90%)",
+    border: "hsl(240, 2.60%, 77.50%)",
 
     backgroundToogle: "hsl(0, 0%, 93%)",
 

@@ -48,3 +48,12 @@ export const NavBar = styled.div`
     }
   }
 `;
+
+export const Content = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+`;

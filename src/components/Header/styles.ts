@@ -9,7 +9,7 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
+  padding: 2rem 1rem;
   margin-top: 2.5rem;
 
   background: ${(props) => props.theme.colors.cardBackground};
