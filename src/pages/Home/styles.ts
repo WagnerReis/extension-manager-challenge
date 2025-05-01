@@ -27,25 +27,26 @@ export const NavBar = styled.div`
   nav {
     display: flex;
     gap: 1rem;
+  }
+`;
 
-    button {
-      padding: 0.75rem 1rem;
-      border-radius: 30px;
-      font-size: 24px;
+export const NavButton = styled.button<{ selected: boolean }>`
+  padding: 0.75rem 1rem;
+  border-radius: 30px;
+  font-size: 24px;
+  border: 1px solid ${(props) => props.theme.colors.border};
 
-      border: 1px solid ${(props) => props.theme.colors.border};
-      background: ${(props) => props.theme.colors.buttonBackground};
-      color: ${(props) => props.theme.colors.text};
-      cursor: pointer;
+  background: ${(props) =>
+    props.selected
+      ? props.theme.colors.red700
+      : props.theme.colors.cardBackground};
+  color: ${(props) =>
+    props.selected ? props.theme.colors.background : props.theme.colors.text};
 
-      &:hover {
-        opacity: 0.7;
-      }
+  cursor: pointer;
 
-      &:active {
-        border: 2px solid ${(props) => props.theme.colors.red400};
-      }
-    }
+  &:hover {
+    opacity: 0.7;
   }
 `;
 

@@ -7,7 +7,7 @@ export const CardContainer = styled.div`
   border-radius: 20px;
 
   background: ${(props) => props.theme.colors.cardBackground};
-  border: 2px solid ${(props) => props.theme.colors.border};
+  border: 1px solid ${(props) => props.theme.colors.border};
 
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@ export const CardTitle = styled.div`
   }
 
   p {
-    color: ${(props) => props.theme.colors.neutral600};
+    color: ${(props) => props.theme.colors.textSecondary};
     font-size: 16px;
     font-weight: 400;
 
@@ -49,7 +49,7 @@ export const RemoveButton = styled.button`
   font-weight: 400;
   cursor: pointer;
 
-  padding: 0.5rem;
+  padding: 0.75rem;
   border-radius: 40px;
 
   &:hover {

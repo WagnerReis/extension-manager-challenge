@@ -17,6 +17,7 @@ export const darkTheme = {
     cardBackground: "hsl(226, 25%, 17%)",
     buttonBackground: "hsl(225, 23%, 24%)",
     text: "hsl(0, 0%, 93%)",
+    textSecondary: "hsl(0, 0%, 78%)",
     border: "hsl(225, 23%, 24%)",
 
     backgroundToogle: "hsl(225, 23%, 24%)",
