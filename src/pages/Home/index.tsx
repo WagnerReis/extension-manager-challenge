@@ -6,8 +6,23 @@ import data from "../../../data.json";
 import { Card } from "../../components/Card";
 
 export function Home() {
-  const [extension, setExtension] = useState(data);
+  const [extensions, setExtensions] = useState(data);
   const [selected, setSelected] = useState("all");
+
+  function handleFilterByActiveExtensions() {
+    setSelected("active");
+    setExtensions(data.filter((item) => item.isActive === true));
+  }
+
+  function handleFilterByInactiveExtensions() {
+    setSelected("inactive");
+    setExtensions(data.filter((item) => item.isActive === false));
+  }
+
+  function handleFilterAllExtensions() {
+    setSelected("all");
+    setExtensions(data);
+  }
 
   return (
     <Container>
@@ -19,19 +34,19 @@ export function Home() {
         <nav>
           <NavButton
             selected={selected === "all"}
-            onClick={() => setSelected("all")}
+            onClick={handleFilterAllExtensions}
           >
             All
           </NavButton>
           <NavButton
             selected={selected === "active"}
-            onClick={() => setSelected("active")}
+            onClick={handleFilterByActiveExtensions}
           >
             Active
           </NavButton>
           <NavButton
             selected={selected === "inactive"}
-            onClick={() => setSelected("inactive")}
+            onClick={handleFilterByInactiveExtensions}
           >
             Inactive
           </NavButton>
@@ -39,7 +54,7 @@ export function Home() {
       </NavBar>
 
       <Content>
-        {extension.map((item) => (
+        {extensions.map((item) => (
           <Card
             key={item.name}
             logo={item.logo}
