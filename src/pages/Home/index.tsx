@@ -19,17 +19,20 @@ export function Home() {
 
   function handleFilterByActiveExtensions() {
     setSelected("active");
-    setExtensions(data.filter((item) => item.isActive === true));
   }
 
   function handleFilterByInactiveExtensions() {
     setSelected("inactive");
-    setExtensions(data.filter((item) => item.isActive === false));
   }
 
   function handleFilterAllExtensions() {
     setSelected("all");
-    setExtensions(data);
+  }
+
+  function handleRemoveExtension(name: string) {
+    setAllExtensions((prevExtensions) =>
+      prevExtensions.filter((extension) => extension.name !== name),
+    );
   }
 
   const handleToggleExtension = useCallback((name: string) => {
@@ -92,6 +95,7 @@ export function Home() {
             description={item.description}
             isActive={item.isActive}
             onCheckedChange={() => handleToggleExtension(item.name)}
+            onRemove={() => handleRemoveExtension(item.name)}
           />
         ))}
       </Content>

@@ -76,5 +76,5 @@ export const Content = styled.div`
   max-width: 100%;
   gap: 1rem;
   padding: 1rem 0 3rem;
-  justify-content: center;
+  justify-content: flex-start;
 `;

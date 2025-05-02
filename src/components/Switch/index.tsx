@@ -2,7 +2,7 @@ import { Label, SwitchRoot, Thumb } from "./styles";
 
 interface SwitchProps {
   checked: boolean;
-  onCheckedChange: (checked: boolean) => void;
+  onCheckedChange: () => void;
 }
 
 export function Switch({ checked, onCheckedChange }: SwitchProps) {

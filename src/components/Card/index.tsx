@@ -13,7 +13,8 @@ interface CardProps {
   title: string;
   description: string;
   isActive: boolean;
-  onCheckedChange: (checked: boolean) => void;
+  onCheckedChange: () => void;
+  onRemove: () => void;
 }
 
 export function Card({
@@ -22,6 +23,7 @@ export function Card({
   description,
   isActive,
   onCheckedChange,
+  onRemove,
 }: CardProps) {
   return (
     <CardContainer>
@@ -34,7 +36,7 @@ export function Card({
       </CardHeader>
 
       <CardFooter>
-        <RemoveButton>Remove</RemoveButton>
+        <RemoveButton onClick={onRemove}>Remove</RemoveButton>
         <Switch checked={isActive} onCheckedChange={onCheckedChange} />
       </CardFooter>
     </CardContainer>
