@@ -7,6 +7,7 @@ import {
 } from "./styles";
 
 import { Switch } from "../../components/Switch";
+import imageMap from "../../utils/imageMap";
 
 interface CardProps {
   logo: string;
@@ -25,10 +26,12 @@ export function Card({
   onCheckedChange,
   onRemove,
 }: CardProps) {
+  const logoSrc = imageMap[logo] || logo;
+
   return (
     <CardContainer>
       <CardHeader>
-        <img src={logo} alt="" />
+        <img src={logoSrc} alt="" />
         <CardTitle>
           <h2>{title}</h2>
           <p>{description}</p>
