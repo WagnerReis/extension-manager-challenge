@@ -1,7 +1,7 @@
-import logoDark from "../../assets/logo-dark.svg";
-import logoLight from "../../assets/logo-light.svg";
-import sun from "../../assets/icon-sun.svg";
-import moon from "../../assets/icon-moon.svg";
+import logoDark from "../../../public/assets/logo-dark.svg";
+import logoLight from "../../../public/assets/logo-light.svg";
+import sun from "../../../public/assets/icon-sun.svg";
+import moon from "../../../public/assets/icon-moon.svg";
 import { useTheme } from "../../hooks/useTheme";
 import { HeaderContainer, ToogleTheme, Logo } from "./styles";
 
