@@ -6,14 +6,23 @@ import {
   RemoveButton,
 } from "./styles";
 
+import { Switch } from "../../components/Switch";
+
 interface CardProps {
   logo: string;
   title: string;
   description: string;
   isActive: boolean;
+  onCheckedChange: (checked: boolean) => void;
 }
 
-export function Card({ logo, title, description, isActive }: CardProps) {
+export function Card({
+  logo,
+  title,
+  description,
+  isActive,
+  onCheckedChange,
+}: CardProps) {
   return (
     <CardContainer>
       <CardHeader>
@@ -26,7 +35,7 @@ export function Card({ logo, title, description, isActive }: CardProps) {
 
       <CardFooter>
         <RemoveButton>Remove</RemoveButton>
-        <input type="checkbox" checked={isActive} />
+        <Switch checked={isActive} onCheckedChange={onCheckedChange} />
       </CardFooter>
     </CardContainer>
   );

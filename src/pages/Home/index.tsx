@@ -1,13 +1,21 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Header } from "../../components/Header";
 import { Container, NavBar, Content, NavButton } from "./styles";
 
 import data from "../../../data.json";
 import { Card } from "../../components/Card";
 
+interface Extension {
+  logo: string;
+  name: string;
+  description: string;
+  isActive: boolean;
+}
+
 export function Home() {
-  const [extensions, setExtensions] = useState(data);
+  const [extensions, setExtensions] = useState<Extension[]>(data);
   const [selected, setSelected] = useState("all");
+  const [allExtensions, setAllExtensions] = useState<Extension[]>(data);
 
   function handleFilterByActiveExtensions() {
     setSelected("active");
@@ -23,6 +31,28 @@ export function Home() {
     setSelected("all");
     setExtensions(data);
   }
+
+  const handleToggleExtension = useCallback((name: string) => {
+    setAllExtensions((prevExtensions) => {
+      const updatedExtensions = prevExtensions.map((extension) => {
+        if (extension.name === name) {
+          return { ...extension, isActive: !extension.isActive };
+        }
+        return extension;
+      });
+      return updatedExtensions;
+    });
+  }, []);
+
+  useEffect(() => {
+    if (selected === "active") {
+      setExtensions(allExtensions.filter((item) => item.isActive === true));
+    } else if (selected === "inactive") {
+      setExtensions(allExtensions.filter((item) => item.isActive === false));
+    } else {
+      setExtensions(allExtensions);
+    }
+  }, [allExtensions, selected]);
 
   return (
     <Container>
@@ -61,6 +91,7 @@ export function Home() {
             title={item.name}
             description={item.description}
             isActive={item.isActive}
+            onCheckedChange={() => handleToggleExtension(item.name)}
           />
         ))}
       </Content>

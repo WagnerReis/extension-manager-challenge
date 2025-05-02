@@ -14,9 +14,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState("dark");
 
   function toogleTheme() {
-    const currentTheme = localStorage.getItem("userTheme");
-    console.log("aqui", currentTheme);
-
     const newTheme = theme === "dark" ? "light" : "dark";
 
     setTheme(newTheme);

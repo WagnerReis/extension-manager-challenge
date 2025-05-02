@@ -13,6 +13,8 @@ export const CardContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
+
+  box-shadow: ${(props) => props.theme.shadows.small};
 `;
 
 export const CardHeader = styled.div`
