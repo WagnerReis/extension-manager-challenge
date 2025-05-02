@@ -7,6 +7,10 @@ export const Container = styled.main`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+
+  @media (max-width: 575px) {
+    padding: 0 1rem;
+  }
 `;
 
 export const NavBar = styled.div`
@@ -28,6 +32,17 @@ export const NavBar = styled.div`
     display: flex;
     gap: 1rem;
   }
+
+  @media (max-width: 575px) {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 1rem;
+
+    h1 {
+      font-size: 1.75rem;
+    }
+  }
 `;
 
 export const NavButton = styled.button<{ selected: boolean }>`
@@ -48,13 +63,18 @@ export const NavButton = styled.button<{ selected: boolean }>`
   &:hover {
     opacity: 0.7;
   }
+
+  @media (max-width: 575px) {
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+  }
 `;
 
 export const Content = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  display: flex;
   flex-wrap: wrap;
-  padding-top: 1rem;
-  padding-bottom: 3rem;
+  max-width: 100%;
+  gap: 1rem;
+  padding: 1rem 0 3rem;
+  justify-content: center;
 `;
