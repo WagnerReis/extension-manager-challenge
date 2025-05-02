@@ -1,0 +1,5 @@
+name = "extension-manager"
+compatibility_date = "2023-05-02"
+
+[site]
+bucket = "./dist"
